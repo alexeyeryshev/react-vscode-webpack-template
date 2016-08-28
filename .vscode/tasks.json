@@ -1,0 +1,29 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "command": "npm",
+    "isShellCommand": true,
+    "showOutput": "always",
+    "suppressTaskName": true,
+    "echoCommand": true,
+    "tasks": [
+        {
+            "taskName": "build",
+            "args": [
+                "run-script",
+                "build"
+            ],
+            "suppressTaskName" : true
+        },
+        // Bind npm run task on test task (because in actaul version of vscode there aren't many task available for shortcuts.)
+        {
+            "taskName": "test",
+            "args": [
+                "run-script",
+                "run"
+            ],
+            "suppressTaskName" : true
+        }
+    ]
+}
